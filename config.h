@@ -1,5 +1,6 @@
 /* See LICENSE file for copyright and license details. */
 
+
 /*
  * appearance
  *
@@ -33,8 +34,8 @@ static unsigned int tripleclicktimeout = 600;
 static int allowaltscreen = 1;
 
 /* frames per second st should at maximum draw to the screen */
-static unsigned int xfps = 120;
-static unsigned int actionfps = 30;
+static unsigned int xfps = 144;
+static unsigned int actionfps = 144;
 
 /*
  * blinking timeout (set to 0 to disable blinking) for the terminal blinking
@@ -59,7 +60,7 @@ static char termname[] = "st-256color";
 static unsigned int tabspaces = 4;
 
 /* background opacity */
-static const int alpha = 0x88;
+static const int alpha = 0xFF;
 
 /**
  * Solarized dark scheme (http://ethanschoonover.com/solarized)
@@ -85,19 +86,22 @@ static const char *colorname[] = {
     "#fdf6e3",  /*  15: brwhite  */
 
     [255] = 0,  /* other colors follow */
+    //[101] = "#0f111a",
 
-   "#999999",  /* 256: background */
-   // "#fbfbfb",  /* 257: foreground */
-    "#fbfbfb",
+   "#0f111a",  /* 256: background */
+   "#fbfbfb",  /* 257: foreground */
+   "#fa5bcd",
+   "#0f111a",
+   "#ffffff",
 };
 
 /**
  * Default colors (colorname index)
  * foreground, background, cursor
  */
-static unsigned int defaultfg = 257;
+static unsigned int defaultfg = 260;
 // static unsigned int defaultbg = 258; black
-static unsigned int defaultbg = 300;
+static unsigned int defaultbg = 259;
 static unsigned int defaultcs = 14;
 static unsigned int defaultrcs = 257;
 
@@ -108,7 +112,7 @@ static unsigned int defaultrcs = 257;
  * 6: Bar ("|")
  * 7: Snowman ("☃")
  */
-static unsigned int cursorshape = 2;
+static unsigned int cursorshape = 6;
 
 /*
  * Default colour and shape of the mouse cursor
